@@ -54,18 +54,6 @@ func (g *Game) RenderMap(){
 	}
 }
 
-func (g *Game) HandleHorizontalCollisions(){
-	for _, tile := range g.Tiles {
-		g.Player.CheckHorizontalCollision(&tile)
-	}
-}
-
-func (g *Game) HandleVerticalollisions(){
-	for _, tile := range g.Tiles {
-		g.Player.CheckVerticalCollision(&tile)
-	}
-}
-
 func (g *Game) Run(){
 	rl.InitWindow(g.Width, g.Height,g.Tile)	
 	defer rl.CloseWindow()
